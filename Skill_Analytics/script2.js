@@ -13,7 +13,7 @@ async function callAPI(userquery,param){
             "temperature": 0
         }),
         headers: {
-            'Authorization': "Bearer "+"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",
+            'Authorization': "Bearer "+"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",
             'Content-Type' : 'application/json'
         
         }
