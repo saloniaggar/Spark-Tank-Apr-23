@@ -1,9 +1,12 @@
 
 console.info("Satyam");
 
+
 async function callAPI(userquery,param){
 
     console.info(userquery);
+    const d = "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";
+    const f = d;
     let options={
         method:"post",
         body: JSON.stringify({
@@ -13,7 +16,7 @@ async function callAPI(userquery,param){
             "temperature": 0
         }),
         headers: {
-            'Authorization': "Bearer "+"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",
+            'Authorization': "Bearer "+d,
             'Content-Type' : 'application/json'
         
         }
