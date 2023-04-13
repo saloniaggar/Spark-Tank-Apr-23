@@ -16,7 +16,7 @@ async function callAPI(userquery,param){
             "temperature": 0
         }),
         headers: {
-            'Authorization': "Bearer "+d,
+            'Authorization': "Bearer "+f,
             'Content-Type' : 'application/json'
         
         }
