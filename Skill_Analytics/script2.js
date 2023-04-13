@@ -5,8 +5,7 @@ console.info("Satyam");
 async function callAPI(userquery,param){
 
     console.info(userquery);
-    const d = "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";
-    const f = d;
+    const key=await sat();
     let options={
         method:"post",
         body: JSON.stringify({
@@ -16,7 +15,7 @@ async function callAPI(userquery,param){
             "temperature": 0
         }),
         headers: {
-            'Authorization': "Bearer "+f,
+            'Authorization': "Bearer "+key,
             'Content-Type' : 'application/json'
         
         }
@@ -38,4 +37,15 @@ function showaskquestion(param){
         document.getElementById(param).style.display = "block";
     }
    
+}
+async function sat(){
+
+    console.info("inside");
+
+  let res= await fetch('Skill_Analytics/file.txt');
+
+  let t = await res.text();
+
+  return t;
+
 }
